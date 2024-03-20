@@ -9,6 +9,7 @@ import SwiftUI
 
 
 struct ContentView: View {
+    
     let startPosition = MapCameraPosition.region(
      MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 56, longitude: -3),
@@ -16,19 +17,34 @@ struct ContentView: View {
      )
     )
     
-    @State private var locations = [Location]()
+    @State private var viewModel = ViewModel()
     
     var body: some View {
         MapReader { proxy in
             Map(initialPosition: startPosition) {
-                ForEach(locations) { location in
-                    Marker(location.name, coordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude))
+                ForEach(viewModel.locations) { location in
+//                    Marker(location.name, coordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude))
+                    Annotation(location.name, coordinate: location.coordinate) {
+                        Image(systemName: "star.circle")
+                            .resizable()
+                            .foregroundStyle(.green)
+                            .frame(width: 40, height: 40)
+                            .background(.white)
+                            .clipShape(.circle)
+                            .onLongPressGesture {
+                                viewModel.selectedPlace = location
+                            }
+                    }
                 }
             }
             .onTapGesture { position in
                 if let coordinate = proxy.convert(position, from: .local) {
-                    let newLocation = Location(id: UUID(), name: "New Location", description: "Na rua 11", latitude: coordinate.latitude, longitude: coordinate.longitude)
-                    locations.append(newLocation)
+                    viewModel.addLocation(at: coordinate)
+                }
+            }
+            .sheet(item: $viewModel.selectedPlace) { place in
+                EditView(location: place) { newLocation in
+                    viewModel.updateLocation(location: newLocation)
                 }
             }
             

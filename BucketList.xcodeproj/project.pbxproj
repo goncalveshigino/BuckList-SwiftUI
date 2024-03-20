@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D69AB0072BAB08F80023DB78 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AB0062BAB08F80023DB78 /* Location.swift */; };
+		D69AB0092BAB152C0023DB78 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AB0082BAB152C0023DB78 /* EditView.swift */; };
+		D69AB00B2BAB34B20023DB78 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AB00A2BAB34B20023DB78 /* Result.swift */; };
+		D69AB00D2BAB748B0023DB78 /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AB00C2BAB748B0023DB78 /* ContentView-ViewModel.swift */; };
 		D6D5E0592B9E36480011992B /* BucketListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D5E0582B9E36480011992B /* BucketListApp.swift */; };
 		D6D5E05B2B9E36480011992B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D5E05A2B9E36480011992B /* ContentView.swift */; };
 		D6D5E05D2B9E364C0011992B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6D5E05C2B9E364C0011992B /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 
 /* Begin PBXFileReference section */
 		D69AB0062BAB08F80023DB78 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		D69AB0082BAB152C0023DB78 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		D69AB00A2BAB34B20023DB78 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		D69AB00C2BAB748B0023DB78 /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
 		D6D5E0552B9E36480011992B /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D5E0582B9E36480011992B /* BucketListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListApp.swift; sourceTree = "<group>"; };
 		D6D5E05A2B9E36480011992B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +61,9 @@
 			children = (
 				D6D5E0582B9E36480011992B /* BucketListApp.swift */,
 				D6D5E05A2B9E36480011992B /* ContentView.swift */,
+				D69AB0082BAB152C0023DB78 /* EditView.swift */,
+				D69AB00A2BAB34B20023DB78 /* Result.swift */,
+				D69AB00C2BAB748B0023DB78 /* ContentView-ViewModel.swift */,
 				D69AB0062BAB08F80023DB78 /* Location.swift */,
 				D6D5E05C2B9E364C0011992B /* Assets.xcassets */,
 				D6D5E05E2B9E364C0011992B /* Preview Content */,
@@ -141,7 +150,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6D5E05B2B9E36480011992B /* ContentView.swift in Sources */,
+				D69AB00D2BAB748B0023DB78 /* ContentView-ViewModel.swift in Sources */,
+				D69AB00B2BAB34B20023DB78 /* Result.swift in Sources */,
 				D69AB0072BAB08F80023DB78 /* Location.swift in Sources */,
+				D69AB0092BAB152C0023DB78 /* EditView.swift in Sources */,
 				D6D5E0592B9E36480011992B /* BucketListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
